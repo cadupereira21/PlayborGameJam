@@ -8,8 +8,7 @@ public class BackgroundTextureAnimator : MonoBehaviour
     private Vector2 offset;
 
     [Range(0.1f, 100.0f)]
-    [SerializeField]
-    float speed = 5f;
+    public float speed = 5f;
 
     [Range(0.1f, 100.0f)]
     [SerializeField]
@@ -23,9 +22,9 @@ public class BackgroundTextureAnimator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        offset.x = offset.x + (speed * Time.deltaTime / speedController);
+        offset.x = offset.x + (speed * Time.fixedDeltaTime / speedController);
         mat.SetTextureOffset("_MainTex", offset);
     }
 }
