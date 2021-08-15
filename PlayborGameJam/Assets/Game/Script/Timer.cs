@@ -18,7 +18,6 @@ public class Timer : MonoBehaviour
         //secondsLabel.text = seconds.ToString("00");
         //minutesLabel.text = minutes.ToString("00");
         seconds += Time.deltaTime;
-        Debug.Log(seconds);
 
         if(seconds > secondsLimit)
         {

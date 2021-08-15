@@ -17,6 +17,19 @@ public class GameController : MonoBehaviour
     public void Start()
     {
         startButton.SetActive(true);
+        FindObjectOfType<AudioManager>().Play(GameSounds.Theme);
+        FindObjectOfType<AudioManager>().Play(GameSounds.LaneStep_0);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_0, 0);
+        FindObjectOfType<AudioManager>().Play(GameSounds.LaneStep_1);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_1, 0);
+        FindObjectOfType<AudioManager>().Play(GameSounds.LaneStep_2);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_2, 0);
+        FindObjectOfType<AudioManager>().Play(GameSounds.LaneSound0);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound0, 0);
+        FindObjectOfType<AudioManager>().Play(GameSounds.LaneSound1);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound1, 0);
+        FindObjectOfType<AudioManager>().Play(GameSounds.LaneSound2);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound2, 0);
     }
 
     public void Update()
@@ -33,15 +46,18 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         isGameRunning = false;
-        FindObjectOfType<AudioManager>().StopStepSound(GameSounds.LaneStep_0);
-        FindObjectOfType<AudioManager>().StopStepSound(GameSounds.LaneStep_1);
-        FindObjectOfType<AudioManager>().StopStepSound(GameSounds.LaneStep_2);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_0, 0);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_1, 0);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_2, 0);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound0, 0);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound1, 0);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound2, 0);
     }
 
     public void GameStart()
     {
         isGameRunning = true;
-        startButton.SetActive(false);
+
         player.SetStepSound();
     }
 

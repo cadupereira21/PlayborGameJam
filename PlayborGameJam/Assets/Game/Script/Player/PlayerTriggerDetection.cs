@@ -18,11 +18,8 @@ public class PlayerTriggerDetection : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(CollidersTag.Stone))
-        {
-            Debug.Log("Player tropeçou em " + collision.tag);
-            player.lifes -= 1;
-            Debug.Log("Vidas restantes = " + player.lifes);
-        }
+        FindObjectOfType<AudioManager>().Play(GameSounds.Hit);
+        player.lifes -= 1;
+        Debug.Log("Vidas restantes = " + player.lifes);
     }
 }

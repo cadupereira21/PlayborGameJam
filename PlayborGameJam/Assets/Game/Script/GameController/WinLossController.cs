@@ -26,7 +26,7 @@ public class WinLossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.lifes <= 0)
+        if(player.lifes < 1)
         {
             LoseGame();
         }
@@ -38,6 +38,11 @@ public class WinLossController : MonoBehaviour
 
     void WinGame()
     {
+        if (isAWin)
+        {
+            return;
+        }
+        FindObjectOfType<AudioManager>().Play(GameSounds.Victory);
         Debug.LogWarning("Você venceu!");
         winCanvas.SetActive(true);
         gameController.GameOver();
@@ -47,6 +52,13 @@ public class WinLossController : MonoBehaviour
 
     void LoseGame()
     {
+        if (isALoss)
+        {
+            return;
+        }
+        //Time.timeScale = 1.0f;
+        FindObjectOfType<AudioManager>().Play(GameSounds.GameOver);
+        //Time.timeScale = 0.0f;
         Debug.LogWarning("Você Perdeu!");
         lossCanvas.SetActive(true);
         gameController.GameOver();
