@@ -129,12 +129,10 @@ public class ObstacleGenerator : MonoBehaviour
         
                 FindObjectOfType<AudioManager>().Play(gameSound_1);
                 FindObjectOfType<AudioManager>().Play(gameSound_2);
-                yield return new WaitForSeconds(.5f);
-                FindObjectOfType<AudioManager>().Play(gameSound_1);
-                FindObjectOfType<AudioManager>().Play(gameSound_2);
-                yield return new WaitForSeconds(.5f);
-                FindObjectOfType<AudioManager>().Play(gameSound_1);
-                FindObjectOfType<AudioManager>().Play(gameSound_2);
+                //yield return new WaitForSeconds(.5f);
+                //FindObjectOfType<AudioManager>().Play(gameSound_1);
+                //FindObjectOfType<AudioManager>().Play(gameSound_2);
+                yield return new WaitForSeconds(1.2f);
                 //obstacleIndicator.SetActive(false);
                 break;
             }

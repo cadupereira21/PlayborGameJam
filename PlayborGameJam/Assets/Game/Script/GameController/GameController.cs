@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
     {
         startButton.SetActive(true);
         FindObjectOfType<AudioManager>().Play(GameSounds.Theme);
-        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_0, 0.3f);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_0, 0.2f);
         FindObjectOfType<AudioManager>().Play(GameSounds.LaneStep_0);
         FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_0, 0);
         FindObjectOfType<AudioManager>().Play(GameSounds.LaneStep_1);
@@ -71,7 +71,7 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("FirstLevel");
         FindObjectOfType<AudioManager>().StopSound(GameSounds.VictorySound);
         FindObjectOfType<AudioManager>().StopSound(GameSounds.GameOverSound);
-        FindObjectOfType<AudioManager>().SetVolume(GameSounds.Theme, 0.3f);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.Theme, 0.2f);
         startButton.SetActive(true);
     }
 }

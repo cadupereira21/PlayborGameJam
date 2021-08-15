@@ -71,16 +71,16 @@ public class PlayerController : MonoBehaviour
         switch (playerActualLane)
         {
             case 0:
-                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_0, 0.4f);
-                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound0, 0.4f);
+                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_0, 0.3f);
+                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound0, 0.3f);
                 break;
             case 1:
-                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_1, 0.4f);
-                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound1, 0.4f);
+                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_1, 0.3f);
+                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound1, 0.3f);
                 break;
             case 2:
-                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_2, 0.4f);
-                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound2, 0.5f);
+                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_2, 0.3f);
+                FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneSound2, 0.45f);
                 break;
         }
     }

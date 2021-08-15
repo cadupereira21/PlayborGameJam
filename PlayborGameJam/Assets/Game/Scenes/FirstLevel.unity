@@ -150,14 +150,14 @@ RectTransform:
   m_GameObject: {fileID: 20902951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 395388582}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: -43}
+  m_AnchoredPosition: {x: -295, y: -101.05263}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20902953
@@ -792,7 +792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &338908784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,14 +915,14 @@ RectTransform:
   m_GameObject: {fileID: 391202853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 395388582}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: -276}
+  m_AnchoredPosition: {x: -295, y: -371.43674}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &391202855
@@ -2154,14 +2154,14 @@ RectTransform:
   m_GameObject: {fileID: 1118885847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 395388582}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: 102}
+  m_AnchoredPosition: {x: -295, y: 32.77385}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1118885849
@@ -2612,6 +2612,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 1963510421}
+--- !u!1 &1409432019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409432023}
+  - component: {fileID: 1409432022}
+  - component: {fileID: 1409432021}
+  - component: {fileID: 1409432020}
+  m_Layer: 0
+  m_Name: SuccesAudioTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!61 &1409432020
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409432019}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.05533743}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18391646, y: 11.623908}
+  m_EdgeRadius: 0
+--- !u!114 &1409432021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409432019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d8bd01e91a89e44aa89564f43e1195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 16
+  speedFactor: 50
+--- !u!50 &1409432022
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409432019}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!4 &1409432023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409432019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1529683955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,14 +3300,14 @@ RectTransform:
   m_GameObject: {fileID: 1784699911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 395388582}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: -174}
+  m_AnchoredPosition: {x: -295, y: -232.14795}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784699913
@@ -3281,14 +3375,14 @@ RectTransform:
   m_GameObject: {fileID: 1786420499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 395388582}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: 102}
+  m_AnchoredPosition: {x: -295, y: 32.773857}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786420501
@@ -3775,25 +3869,25 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 4fe51f18d842a4648bccef528db766f4, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Lane0
     clip: {fileID: 8300000, guid: 8cfd47c86b81d24488795468995eae2f, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Lane1
     clip: {fileID: 8300000, guid: f0fba75baf76a514da1e094bc11a31be, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Lane2
     clip: {fileID: 8300000, guid: 2297347d09698b848ad3da652b4e9944, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -3811,25 +3905,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: VictoryVoice
     clip: {fileID: 8300000, guid: 4737b4b478ad70a44951eecfd3639ad0, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: GameOverVoice
     clip: {fileID: 8300000, guid: 59ceeff8ab94d1f47b55c102760a6cc4, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Lane0bg
     clip: {fileID: 8300000, guid: 8acb3b4a0bd2c704bb95d79425027be6, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Lane1bg
     clip: {fileID: 8300000, guid: adc35ecf8fa3e7e4f9ec8d92b1dc133d, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -3853,13 +3947,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: VictorySound
     clip: {fileID: 8300000, guid: 29898a185964456469ce68fbba749def, type: 3}
-    volume: 0.8
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: GameOverSound
     clip: {fileID: 8300000, guid: 0df798f71e83bc9468379dd7e23ede89, type: 3}
-    volume: 0.8
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -4579,11 +4673,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6366136808156472784, guid: 8d9408f867e99644b9efa5450911e718, type: 3}
       propertyPath: maxSpawnTime
-      value: 1
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 6366136808156472784, guid: 8d9408f867e99644b9efa5450911e718, type: 3}
       propertyPath: minSpawnTime
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6366136808156472784, guid: 8d9408f867e99644b9efa5450911e718, type: 3}
       propertyPath: obstacleIndicator1
