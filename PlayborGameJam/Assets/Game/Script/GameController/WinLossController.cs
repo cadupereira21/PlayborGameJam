@@ -42,7 +42,9 @@ public class WinLossController : MonoBehaviour
         {
             return;
         }
-        FindObjectOfType<AudioManager>().Play(GameSounds.Victory);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.Theme, 0f);
+        FindObjectOfType<AudioManager>().Play(GameSounds.VictoryVoice);
+        FindObjectOfType<AudioManager>().Play(GameSounds.VictorySound);
         Debug.LogWarning("Você venceu!");
         winCanvas.SetActive(true);
         gameController.GameOver();
@@ -57,7 +59,9 @@ public class WinLossController : MonoBehaviour
             return;
         }
         //Time.timeScale = 1.0f;
-        FindObjectOfType<AudioManager>().Play(GameSounds.GameOver);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.Theme, 0f);
+        FindObjectOfType<AudioManager>().Play(GameSounds.GameOverVoice);
+        FindObjectOfType<AudioManager>().Play(GameSounds.GameOverSound);
         //Time.timeScale = 0.0f;
         Debug.LogWarning("Você Perdeu!");
         lossCanvas.SetActive(true);

@@ -7,7 +7,9 @@ public class GameController : MonoBehaviour
 {
     public PlayerController player;
     public GameObject startButton;
+    public Canvas hud;
     public bool isGameRunning;
+    //public static float levelSpeed = 1f; usar para pausar e despausar a fase?
 
     public void Awake()
     {
@@ -18,6 +20,7 @@ public class GameController : MonoBehaviour
     {
         startButton.SetActive(true);
         FindObjectOfType<AudioManager>().Play(GameSounds.Theme);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_0, 0.3f);
         FindObjectOfType<AudioManager>().Play(GameSounds.LaneStep_0);
         FindObjectOfType<AudioManager>().SetVolume(GameSounds.LaneStep_0, 0);
         FindObjectOfType<AudioManager>().Play(GameSounds.LaneStep_1);
@@ -37,9 +40,11 @@ public class GameController : MonoBehaviour
         if (isGameRunning)
         {
             Time.timeScale = 1.0f;
+            hud.gameObject.SetActive(true);
         } else
         {
             Time.timeScale = 0.0f;
+            hud.gameObject.SetActive(false);
         }
     }
 
@@ -64,6 +69,9 @@ public class GameController : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene("FirstLevel");
+        FindObjectOfType<AudioManager>().StopSound(GameSounds.VictorySound);
+        FindObjectOfType<AudioManager>().StopSound(GameSounds.GameOverSound);
+        FindObjectOfType<AudioManager>().SetVolume(GameSounds.Theme, 0.3f);
         startButton.SetActive(true);
     }
 }

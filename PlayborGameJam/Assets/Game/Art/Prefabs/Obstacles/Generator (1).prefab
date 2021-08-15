@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &92626967471714107
+--- !u!1 &840599928109079485
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 92626967471714106}
-  - component: {fileID: 5961205839298056534}
+  - component: {fileID: 840599928109079484}
+  - component: {fileID: 6366136808156472784}
   m_Layer: 0
-  m_Name: Generator
+  m_Name: Generator (1)
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &92626967471714106
+--- !u!4 &840599928109079484
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 92626967471714107}
+  m_GameObject: {fileID: 840599928109079485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: -3.81, z: 0}
+  m_LocalPosition: {x: 25, y: -1.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5961205839298056534
+--- !u!114 &6366136808156472784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 92626967471714107}
+  m_GameObject: {fileID: 840599928109079485}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26b47b0434de6c742a59ee439a6785c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleIndicator1: {fileID: 0}
+  obstacleIndicator2: {fileID: 0}
+  obstacleIndicator3: {fileID: 0}
+  obstacleIndicator4: {fileID: 0}
+  obstacleIndicator5: {fileID: 0}
   obstacles:
-  - {fileID: 549227639305175441, guid: ace01d7735e93844a9f6f0d7b172f603, type: 3}
-  - {fileID: 549227639305175441, guid: c5d92a18a4d44a140a7b84d0e92b95d9, type: 3}
-  - {fileID: 549227639305175441, guid: 4b12f69fa8510dc4f9fa91a5a62124bf, type: 3}
-  - {fileID: 549227639305175441, guid: 969efea13bb9d7b498eb3e1fa6c49fa7, type: 3}
+  - {fileID: 1700676249297537189, guid: 648cb476f275aaa4aaa1dc79b0826360, type: 3}
+  - {fileID: 3644238502681351862, guid: 1a6dba61199cb9e4bb0824b8fa594e49, type: 3}
+  - {fileID: 517498518274392738, guid: 0f27c5b87959e234f84063fb126c7515, type: 3}
+  - {fileID: 4286731962921625226, guid: 62fa37edf81e4b74f85fcbf3fbdcd621, type: 3}
+  - {fileID: 8298309739903213190, guid: 9bac57ce8f24ac448bb78a03aa671aa6, type: 3}
   obstaclesToSpawn: []
-  minSpawnTime: 2
-  maxSpawnTime: 5
+  minSpawnTime: 0.72
+  maxSpawnTime: 1.28
